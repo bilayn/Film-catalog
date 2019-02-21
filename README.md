@@ -1,11 +1,11 @@
-# Movie catalog
-WPF .Net c #
+# Film catalog
+WPF .Net C#
 
 The project is built on the MVVM pattern
 implemented dependency injection container
 
 This is my WPF technology exam.
-used frames:
+used frameworks:
 
 -ninject
 
