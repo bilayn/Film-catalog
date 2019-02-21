@@ -6,8 +6,15 @@ implemented dependency injection container
 
 This is my WPF technology exam.
 used frames:
+
 -ninject
+
 -sqlite
+
 -Newtonsoft.Json
+
 -Interactivity
+
 -LinqKit
+
+-materialdesignin
