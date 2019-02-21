@@ -1,0 +1,7 @@
+C:\Users\bilay\source\repos\WPF_FinalProgect\Infrastructure\bin\Debug\Infrastructure.dll
+C:\Users\bilay\source\repos\WPF_FinalProgect\Infrastructure\bin\Debug\Infrastructure.pdb
+C:\Users\bilay\source\repos\WPF_FinalProgect\Infrastructure\obj\Debug\Infrastructure.csprojAssemblyReference.cache
+C:\Users\bilay\source\repos\WPF_FinalProgect\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\bilay\source\repos\WPF_FinalProgect\Infrastructure\obj\Debug\Infrastructure.dll
+C:\Users\bilay\source\repos\WPF_FinalProgect\Infrastructure\obj\Debug\Infrastructure.pdb
+C:\Users\bilay\source\repos\WPF_FinalProgect\Infrastructure\bin\Debug\Infrastructure.dll.config
