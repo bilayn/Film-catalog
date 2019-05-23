@@ -18,28 +18,13 @@ namespace Infrastructure
             this.predicate = predicate;
         }
 
-
-        public bool CanExecute(object parameter)
-        {
-            return predicate == null ? true : predicate(parameter);
-        }
-
-        public void Execute(object parameter)
-        {
-            action(parameter);
-        }
-
+        public bool CanExecute(object parameter) => predicate == null ? true : predicate(parameter);
+        public void Execute(object parameter) => action(parameter);
 
         public event EventHandler CanExecuteChanged
         {
-            add
-            {
-                CommandManager.RequerySuggested += value;
-            }
-            remove
-            {
-                CommandManager.RequerySuggested -= value;
-            }
+            add => CommandManager.RequerySuggested += value;
+            remove => CommandManager.RequerySuggested -= value;
         }
     }
 }
