@@ -135,8 +135,8 @@
   <data name="Exit" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="Filmoteca" xml:space="preserve">
-    <value>Filmoteca</value>
+  <data name="Movieoteca" xml:space="preserve">
+    <value>Movie catalog</value>
   </data>
   <data name="Ganre" xml:space="preserve">
     <value>Ganre</value>

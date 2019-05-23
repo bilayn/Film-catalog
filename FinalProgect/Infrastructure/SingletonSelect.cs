@@ -9,6 +9,6 @@ namespace FinalProgect.Infrastructure
 {
     class SingletonSelect
     {
-        public static Film Film { get; set; }
+        public static Movie Movie { get; set; }
     }
 }

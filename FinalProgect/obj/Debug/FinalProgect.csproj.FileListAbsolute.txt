@@ -45,9 +45,62 @@ C:\Users\bilay\source\repos\WPF_FinalProgect\FinalProgect\bin\Debug\ru-RU\FinalP
 C:\Users\bilay\source\repos\WPF_FinalProgect\FinalProgect\obj\Debug\ru-RU\FinalProgect.resources.dll
 C:\Users\bilay\source\repos\WPF_FinalProgect\FinalProgect\obj\Debug\FinalProgect.Resourses.Resources.ru-RU.resources
 C:\Users\bilay\source\repos\WPF_FinalProgect\FinalProgect\obj\Debug\FinalProgect.Resourses.Resources.resources
-C:\Users\bilay\source\repos\WPF_FinalProgect\FinalProgect\bin\Debug\Film.db
+C:\Users\bilay\source\repos\WPF_FinalProgect\FinalProgect\bin\Debug\Movie.db
 C:\Users\bilay\source\repos\WPF_FinalProgect\FinalProgect\bin\Debug\System.Data.SQLite.dll
 C:\Users\bilay\source\repos\WPF_FinalProgect\FinalProgect\bin\Debug\System.Data.SQLite.EF6.dll
 C:\Users\bilay\source\repos\WPF_FinalProgect\FinalProgect\bin\Debug\System.Data.SQLite.Linq.dll
 C:\Users\bilay\source\repos\WPF_FinalProgect\FinalProgect\bin\Debug\System.Data.SQLite.xml
 C:\Users\bilay\source\repos\WPF_FinalProgect\FinalProgect\bin\Debug\System.Data.SQLite.dll.config
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\FinalProgect.csprojAssemblyReference.cache
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\View\MainWindow.g.cs
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\View\Watch.g.cs
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\App.g.cs
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\FinalProgect_Content.g.cs
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\FinalProgect_MarkupCompile.cache
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\FinalProgect_MarkupCompile.lref
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\FinalProgect.exe
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\FinalProgect.pdb
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\EntityFramework.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\Infrastructure.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\LinqKit.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\MaterialDesignColors.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\Microsoft.Expression.Interactions.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\Ninject.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\System.Data.SQLite.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\System.Windows.Interactivity.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\Infrastructure.pdb
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\Infrastructure.dll.config
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\EntityFramework.xml
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\LinqKit.xml
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\MaterialDesignColors.pdb
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\Microsoft.Expression.Interactions.xml
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\Newtonsoft.Json.pdb
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\Ninject.xml
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\System.Data.SQLite.xml
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\System.Data.SQLite.dll.config
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\App.baml
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\View\MainWindow.baml
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\View\Watch.baml
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\FinalProgect.g.resources
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\FinalProgect.Properties.Resources.resources
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\FinalProgect.Resourses.Resources.resources
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\FinalProgect.Resourses.Resources.ru-RU.resources
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\FinalProgect.csproj.GenerateResource.cache
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\FinalProgect.csproj.CoreCompileInputs.cache
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\ru-RU\FinalProgect.resources.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\obj\Debug\FinalProgect.csproj.CopyComplete
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\Film.db
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\FinalProgect.exe.config
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\FinalProgect.exe
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\FinalProgect.pdb
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\FinalProgect\bin\Debug\ru-RU\FinalProgect.resources.dll

@@ -12,10 +12,10 @@ namespace FinalProgect.Data
 {
     class JsonSaver : ISaver
     {
-        public void SaveFilms(IEnumerable<Film> films)
+        public void SaveMovies(IEnumerable<Movie> movies)
         {
-            string filmsStr = JsonConvert.SerializeObject(films);
-            File.WriteAllText("films.json", filmsStr);
+            string moviesStr = JsonConvert.SerializeObject(movies);
+            File.WriteAllText("movies.json", moviesStr);
         }
     }
 }

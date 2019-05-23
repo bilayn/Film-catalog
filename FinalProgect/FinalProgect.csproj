@@ -138,7 +138,7 @@
     <Compile Include="Infrastructure\ViewModelLocator.cs" />
     <Compile Include="Interface\ILoader.cs" />
     <Compile Include="Interface\ISaver.cs" />
-    <Compile Include="Model\Film.cs" />
+    <Compile Include="Model\Movie.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

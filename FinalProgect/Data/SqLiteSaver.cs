@@ -11,20 +11,20 @@ namespace FinalProgect.Data
 {
     class SqLiteSaver : ISaver
     {
-        public void SaveFilms(IEnumerable<Film> films)
+        public void SaveMovies(IEnumerable<Movie> movies)
         {
             using (SQLiteConnection conn = new SQLiteConnection("Data Source = Film.db"))
             {
                 conn.Open();
-                string query = @"delete from Film";
+                string query = @"delete from Movie";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.ExecuteNonQuery();
-                foreach (var film in films)
+                foreach (var movie in movies)
                 {
-                    query = $@"insert into Film(Image, About, Year, Title, Ganre, Rating, Director, Actors) values ('{film.Image}', '{film.About}',
-                                                                                                                            '{film.Year}', '{film.Title}',
-                                                                                                                            '{film.Ganre}','{film.Rating}',
-                                                                                                                            '{film.Director}','{film.Actors}');";
+                    query = $@"insert into Movie(Image, About, Year, Title, Ganre, Rating, Director, Actors) values ('{movie.Image}', '{movie.About}',
+                                                                                                                            '{movie.Year}', '{movie.Title}',
+                                                                                                                            '{movie.Ganre}','{movie.Rating}',
+                                                                                                                            '{movie.Director}','{movie.Actors}');";
                     cmd = new SQLiteCommand(query, conn);
                     cmd.ExecuteNonQuery();
                 }

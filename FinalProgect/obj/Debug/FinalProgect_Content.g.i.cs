@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("film.db")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("Movie.db")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("system.windows.interactivity.dll")]
 
 

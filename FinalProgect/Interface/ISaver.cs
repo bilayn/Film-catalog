@@ -9,6 +9,6 @@ namespace FinalProgect.Interface
 {
     interface ISaver
     {
-        void SaveFilms(IEnumerable<Film> films);
+        void SaveMovies(IEnumerable<Movie> movies);
     }
 }

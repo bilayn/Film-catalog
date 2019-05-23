@@ -14,12 +14,12 @@ namespace FinalProgect.Data
     class JsonLoader : ILoader
     {
 
-        public void LoadFilms(out ObservableCollection<Film> films)
+        public void LoadMovies(out ObservableCollection<Movie> movies)
         {
-            if (File.Exists("films.json"))
-                films = JsonConvert.DeserializeObject<ObservableCollection<Film>>(File.ReadAllText("films.json"));
+            if (File.Exists("Movies.json"))
+                movies = JsonConvert.DeserializeObject<ObservableCollection<Movie>>(File.ReadAllText("movies.json"));
             else
-                films = new ObservableCollection<Film>();
+                movies = new ObservableCollection<Movie>();
         }
         
     }

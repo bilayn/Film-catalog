@@ -1,4 +1,4 @@
-# Film catalog
+# Movie catalog
 WPF .Net C#
 
 The project is built on the MVVM pattern

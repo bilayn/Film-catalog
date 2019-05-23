@@ -40,7 +40,7 @@
                 Grid.Column="0"
                 Width="200"
                 Height="300"
-                Source="{Binding SelectedFilm.Image}" />
+                Source="{Binding SelectedMovie.Image}" />
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*" />
@@ -61,7 +61,7 @@
                         FontSize="20"
                         FontWeight="Medium"
                         Style="{StaticResource MaterialDesignDisplay1TextBlock}"
-                        Text="{Binding SelectedFilm.Title}"
+                        Text="{Binding SelectedMovie.Title}"
                         TextWrapping="Wrap" />
                     <Button
                         Grid.Column="1"
@@ -102,7 +102,7 @@
                         Grid.Column="1"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        Text="{Binding SelectedFilm.Year}" />
+                        Text="{Binding SelectedMovie.Year}" />
                     <TextBlock
                         Grid.Row="1"
                         Grid.Column="0"
@@ -117,7 +117,7 @@
                         Grid.Column="1"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        Text="{Binding SelectedFilm.Ganre}" />
+                        Text="{Binding SelectedMovie.Ganre}" />
                     <TextBlock
                         Grid.Row="2"
                         Grid.Column="0"
@@ -132,7 +132,7 @@
                         Grid.Column="1"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        Text="{Binding SelectedFilm.Director}" />
+                        Text="{Binding SelectedMovie.Director}" />
                     <TextBlock
                         Grid.Row="3"
                         Grid.Column="0"
@@ -149,7 +149,7 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         IsEnabled="False"
-                        Value="{Binding SelectedFilm.Rating}" />
+                        Value="{Binding SelectedMovie.Rating}" />
                     <TextBlock
                         Grid.Row="4"
                         Grid.Column="0"
@@ -164,7 +164,7 @@
                         Grid.Column="1"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        Text="{Binding SelectedFilm.Actors}" />
+                        Text="{Binding SelectedMovie.Actors}" />
                 </Grid>
             </Grid>
         </Grid>
@@ -182,7 +182,7 @@
             FontWeight="Normal"
             IsReadOnly="True"
             SpellCheck.IsEnabled="True"
-            Text="{Binding SelectedFilm.About}"
+            Text="{Binding SelectedMovie.About}"
             TextWrapping="Wrap"
             VerticalScrollBarVisibility="Auto" />
     </Grid>

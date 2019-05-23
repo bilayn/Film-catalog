@@ -10,6 +10,6 @@ namespace FinalProgect.Interface
 {
     interface ILoader
     {
-        void LoadFilms(out ObservableCollection<Film> films);
+        void LoadMovies(out ObservableCollection<Movie> movies);
     }
 }

@@ -5,3 +5,10 @@ C:\Users\bilay\source\repos\WPF_FinalProgect\Infrastructure\obj\Debug\Infrastruc
 C:\Users\bilay\source\repos\WPF_FinalProgect\Infrastructure\obj\Debug\Infrastructure.dll
 C:\Users\bilay\source\repos\WPF_FinalProgect\Infrastructure\obj\Debug\Infrastructure.pdb
 C:\Users\bilay\source\repos\WPF_FinalProgect\Infrastructure\bin\Debug\Infrastructure.dll.config
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\Infrastructure\bin\Debug\Infrastructure.dll.config
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\Infrastructure\bin\Debug\Infrastructure.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\Infrastructure\bin\Debug\Infrastructure.pdb
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\Infrastructure\obj\Debug\Infrastructure.csprojAssemblyReference.cache
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\Infrastructure\obj\Debug\Infrastructure.dll
+D:\Documents\Юра\ШАГ ДЗ\Movie-Catalog\Infrastructure\obj\Debug\Infrastructure.pdb

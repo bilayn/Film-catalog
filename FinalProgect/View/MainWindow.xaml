@@ -68,8 +68,8 @@
             <ListBox
                 Name="Ku"
                 Margin="341,80,10,0"
-                ItemsSource="{Binding Films}"
-                SelectedItem="{Binding SelectedFilm}">
+                ItemsSource="{Binding Movies}"
+                SelectedItem="{Binding SelectedMovie}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel
@@ -157,7 +157,7 @@
                                                         TextWrapping="Wrap" />
                                                     <TextBlock
                                                         Opacity=".68"
-                                                        Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBox}}, Path=DataContext.SelectedFilm.Ganre}"
+                                                        Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBox}}, Path=DataContext.SelectedMovie.Ganre}"
                                                         TextWrapping="Wrap" />
                                                     <TextBlock
                                                         FontWeight="Bold"
@@ -167,7 +167,7 @@
                                                         TextWrapping="Wrap" />
                                                     <TextBlock
                                                         Opacity=".68"
-                                                        Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBox}}, Path=DataContext.SelectedFilm.Director}"
+                                                        Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBox}}, Path=DataContext.SelectedMovie.Director}"
                                                         TextWrapping="Wrap" />
                                                     <TextBlock
                                                         FontWeight="Bold"
@@ -177,7 +177,7 @@
                                                         TextWrapping="Wrap" />
                                                     <TextBlock
                                                         Opacity=".68"
-                                                        Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBox}}, Path=DataContext.SelectedFilm.Actors}"
+                                                        Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBox}}, Path=DataContext.SelectedMovie.Actors}"
                                                         TextWrapping="Wrap" />
                                                 </StackPanel>
                                             </Expander>
@@ -330,7 +330,7 @@
                                            Key=Create}" />
                         <Separator />
                         <Button
-                            Command="{Binding MainViewModel.Exit}"
+                            Command="{Binding MainViewModel.ExitCommand}"
                             CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"
                             Content="{Resx ResxName=FinalProgect.Resourses.Resources,
                                            Key=Exit}" />
@@ -357,7 +357,7 @@
                         FontSize="22"
                         Style="{StaticResource MaterialDesignSubheadingTextBlock}"
                         Text="{Resx ResxName=FinalProgect.Resourses.Resources,
-                                    Key=Filmoteca}" />
+                                    Key=Movieoteca}" />
                     <TextBox
                         Name="SearchTextBox"
                         Grid.Column="1"
@@ -367,7 +367,7 @@
                         materialDesign:HintAssist.Hint="{Resx ResxName=FinalProgect.Resourses.Resources,
                                                               Key=Search}"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                        Text="{Binding MainViewModel.SearchFilm, UpdateSourceTrigger=PropertyChanged}"
+                        Text="{Binding MainViewModel.SearchMovie, UpdateSourceTrigger=PropertyChanged}"
                         TextChanged="SearchTextBox_TextChanged" />
                     <materialDesign:Flipper
                         Grid.Column="3"

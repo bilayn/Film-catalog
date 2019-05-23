@@ -14,12 +14,12 @@ namespace FinalProgect.ViewModel
 {
     class WatchViewModel
     {
-        public Film SelectedFilm
+        public Movie SelectedMovie
         {
-            get => SingletonSelect.Film;
+            get => SingletonSelect.Movie;
             set
             {
-                SingletonSelect.Film = value;
+                SingletonSelect.Movie = value;
             }
         }
         private RelayCommand closeCommand;

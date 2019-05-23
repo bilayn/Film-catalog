@@ -12,9 +12,9 @@ namespace FinalProgect.Data
 {
     class SqLiteLoader : ILoader
     {
-        public void LoadFilms(out ObservableCollection<Film> films)
+        public void LoadMovies(out ObservableCollection<Movie> movies)
         {
-            films = new ObservableCollection<Film>();
+            movies = new ObservableCollection<Movie>();
 
             using (SQLiteConnection conn = new SQLiteConnection("Data Source = Film.db"))
             {
@@ -24,7 +24,7 @@ namespace FinalProgect.Data
                 SQLiteDataReader std = cmd.ExecuteReader();
                 while (std.Read())
                 {
-                    films.Add(new Film
+                    movies.Add(new Movie
                     {
                         Image = $"{std["Image"]}",
                         About = $"{std["About"]}",

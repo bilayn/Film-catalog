@@ -21,12 +21,13 @@ namespace FinalProgect.ViewModel
     class MainViewModel : BaseNotify
     {
 
-        private ObservableCollection<Film> films = new ObservableCollection<Film>();
-        private Film selectedFilm;
+        private ObservableCollection<Movie> movies = new ObservableCollection<Movie>();
+        private ICollection<Movie> moviesView;
+        private Movie selectedMovie;
         private ISaver saver;
         private ILoader loader;
-        private string searchFilm;
-        private ObservableCollection<Film> buf = new ObservableCollection<Film>();
+        private string searchMovie;
+        private ObservableCollection<Movie> buf = new ObservableCollection<Movie>();
         public MainViewModel(ISaver saver, ILoader loader)
         {
             this.saver = saver;
@@ -34,41 +35,41 @@ namespace FinalProgect.ViewModel
         }
 
         #region Property
-        public string SearchFilm
+        public string SearchMovie
         {
-            get => searchFilm;
+            get => searchMovie;
             set
             {
-                searchFilm = value;
+                searchMovie = value;
                 Notify();
-                SearchingFilm();
+                SearchingMovie();
             }
         }
 
-        public ObservableCollection<Film> Films
+        public ObservableCollection<Movie> Movies
         {
-            get => films;
+            get => movies;
             set
             {
-                films = value;
+                movies = value;
                 Notify();
             }
         }
 
-        public Film SelectedFilm
+        public Movie SelectedMovie
         {
-            get => selectedFilm;
+            get => selectedMovie;
             set
             {
-                selectedFilm = value;
-                SingletonSelect.Film = value;
+                selectedMovie = value;
+                SingletonSelect.Movie = value;
                 Notify();
             }
         }
         #endregion
 
         #region Command
-        private RelayCommand exit;
+        private RelayCommand exitCommand;
         private RelayCommand theme;
         private RelayCommand updateList;
         private RelayCommand removeCommand;
@@ -104,7 +105,7 @@ namespace FinalProgect.ViewModel
             get
             {
                 if (addCommand == null)
-                    addCommand = new RelayCommand(x => Films.Add(new Film {
+                    addCommand = new RelayCommand(x => Movies.Add(new Movie {
                         Title = "Null",
                         Actors = "Null",
                         Director = "Null",
@@ -133,7 +134,7 @@ namespace FinalProgect.ViewModel
             get
             {
                 if (removeCommand == null)
-                    removeCommand = new RelayCommand(x => { FindSelectedItem((string)x); films.Remove(SelectedFilm); });
+                    removeCommand = new RelayCommand(x => { FindSelectedItem((string)x); movies.Remove(SelectedMovie); });
                 return removeCommand;
             }
         }
@@ -142,7 +143,7 @@ namespace FinalProgect.ViewModel
             get
             {
                 if (updateList == null)
-                    updateList = new RelayCommand(x => { FindSelectedItem((string)x); Films = new ObservableCollection<Film>(Films); });
+                    updateList = new RelayCommand(x => { FindSelectedItem((string)x); Movies = new ObservableCollection<Movie>(Movies); });
                 return updateList;
             }
         }
@@ -156,13 +157,13 @@ namespace FinalProgect.ViewModel
             }
         }
 
-        public ICommand Exit
+        public ICommand ExitCommand
         {
             get
             {
-                if (exit == null)
-                    exit = new RelayCommand(x=>((Window)x).Close());
-                return exit;
+                if (exitCommand == null)
+                    exitCommand = new RelayCommand(x=>((Window)x).Close());
+                return exitCommand;
             }
         }
 
@@ -173,8 +174,8 @@ namespace FinalProgect.ViewModel
                 if (openCommand == null)
                     openCommand = new RelayCommand(x =>
                     {
-                        loader.LoadFilms(out films);
-                        Notify("Films");
+                        loader.LoadMovies(out movies);
+                        Notify(nameof(Movies));
                     });
                 return openCommand;
             }
@@ -185,7 +186,7 @@ namespace FinalProgect.ViewModel
             get
             {
                 if (closeCommand == null)
-                    closeCommand = new RelayCommand(x =>saver.SaveFilms(Films));
+                    closeCommand = new RelayCommand(x =>saver.SaveMovies(Movies));
                 return closeCommand;
             }
         }
@@ -206,12 +207,12 @@ namespace FinalProgect.ViewModel
         }
         private void FindSelectedItem(object parametr)
         {
-            foreach(var i in Films)
+            foreach(var i in Movies)
             {
                 if (parametr as string == i.Title)
                 { 
-                    SelectedFilm = i;
-                    SingletonSelect.Film = i;
+                    SelectedMovie = i;
+                    SingletonSelect.Movie = i;
                     break;
                 }
             }
@@ -222,35 +223,35 @@ namespace FinalProgect.ViewModel
             switch (sortParam)
             {
                 case "Title":
-                    Films = new ObservableCollection<Film>(Films.OrderBy(x => x.Title));
+                    Movies = new ObservableCollection<Movie>(Movies.OrderBy(x => x.Title));
                     break;
                 case "Ganre":
-                    Films = new ObservableCollection<Film>(Films.OrderBy(x => x.Ganre));
+                    Movies = new ObservableCollection<Movie>(Movies.OrderBy(x => x.Ganre));
                     break;
                 case "Year":
-                    Films = new ObservableCollection<Film>(Films.OrderByDescending(x => x.Year));
+                    Movies = new ObservableCollection<Movie>(Movies.OrderByDescending(x => x.Year));
                     break;
                 case "Rating":
-                    Films = new ObservableCollection<Film>(Films.OrderByDescending(x => x.Rating));
+                    Movies = new ObservableCollection<Movie>(Movies.OrderByDescending(x => x.Rating));
                     break;
                 case "Director":
-                    Films = new ObservableCollection<Film>(Films.OrderBy(x => x.Director));
+                    Movies = new ObservableCollection<Movie>(Movies.OrderBy(x => x.Director));
                     break;
             }
         }
 
-        private void SearchingFilm()
+        private void SearchingMovie()
         {
-            if (searchFilm == string.Empty)
+            if (searchMovie == string.Empty)
             {
-                loader.LoadFilms(out films);
-                Notify("Films");
+                loader.LoadMovies(out movies);
+                Notify(nameof(Movies));
                 return;
             }
 
-            var predicate = PredicateBuilder.New<Film>(true);
-            predicate.And(x => x.Title.IndexOf(searchFilm) != -1);
-            Films = new ObservableCollection<Film>(Films.Where(predicate));
+            var predicate = PredicateBuilder.New<Movie>(true);
+            predicate.And(x => x.Title.IndexOf(searchMovie) != -1);
+            Movies = new ObservableCollection<Movie>(Movies.Where(predicate));
         }
 
         private void OpenWatch()
