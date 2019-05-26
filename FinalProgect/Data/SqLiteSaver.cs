@@ -16,12 +16,12 @@ namespace FinalProgect.Data
             using (SQLiteConnection conn = new SQLiteConnection("Data Source = Film.db"))
             {
                 conn.Open();
-                string query = @"delete from Movie";
+                string query = @"delete from Film";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.ExecuteNonQuery();
                 foreach (var movie in movies)
                 {
-                    query = $@"insert into Movie(Image, About, Year, Title, Ganre, Rating, Director, Actors) values ('{movie.Image}', '{movie.About}',
+                    query = $@"insert into Film(Image, About, Year, Title, Ganre, Rating, Director, Actors) values ('{movie.Image}', '{movie.About}',
                                                                                                                             '{movie.Year}', '{movie.Title}',
                                                                                                                             '{movie.Ganre}','{movie.Rating}',
                                                                                                                             '{movie.Director}','{movie.Actors}');";

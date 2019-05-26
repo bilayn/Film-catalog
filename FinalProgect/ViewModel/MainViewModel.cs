@@ -8,41 +8,42 @@ using LinqKit;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using System.Windows.Data;
 using System.Windows.Input;
 
 namespace FinalProgect.ViewModel
 {
     class MainViewModel : BaseNotify
     {
-
         private ObservableCollection<Movie> movies = new ObservableCollection<Movie>();
-        private ICollection<Movie> moviesView;
         private Movie selectedMovie;
         private ISaver saver;
         private ILoader loader;
-        private string searchMovie;
-        private ObservableCollection<Movie> buf = new ObservableCollection<Movie>();
+        private string _searchStringFilter;
         public MainViewModel(ISaver saver, ILoader loader)
         {
             this.saver = saver;
             this.loader = loader;
+
         }
 
         #region Property
+        public ICollectionView MoviesView { get; set; }
         public string SearchMovie
         {
-            get => searchMovie;
+            get => _searchStringFilter;
             set
             {
-                searchMovie = value;
-                Notify();
-                SearchingMovie();
+                _searchStringFilter = value;
+                Notify(nameof(SearchMovie));
+                MoviesView.Refresh();
             }
         }
 
@@ -85,7 +86,7 @@ namespace FinalProgect.ViewModel
             get
             {
                 if (viewCommand == null)
-                    viewCommand = new RelayCommand(x=>{ FindSelectedItem((string)x); OpenWatch(); });
+                    viewCommand = new RelayCommand(x => { FindSelectedItem((string)x); OpenWatch(); });
                 return viewCommand;
             }
         }
@@ -105,7 +106,8 @@ namespace FinalProgect.ViewModel
             get
             {
                 if (addCommand == null)
-                    addCommand = new RelayCommand(x => Movies.Add(new Movie {
+                    addCommand = new RelayCommand(x => Movies.Add(new Movie
+                    {
                         Title = "Null",
                         Actors = "Null",
                         Director = "Null",
@@ -113,7 +115,7 @@ namespace FinalProgect.ViewModel
                         Image = @"..\Images\3.jpg",
                         Rating = 0,
                         Year = 0000,
-                        About="Null"
+                        About = "Null"
                     }));
                 return addCommand;
             }
@@ -162,7 +164,7 @@ namespace FinalProgect.ViewModel
             get
             {
                 if (exitCommand == null)
-                    exitCommand = new RelayCommand(x=>((Window)x).Close());
+                    exitCommand = new RelayCommand(x => ((Window)x).Close());
                 return exitCommand;
             }
         }
@@ -175,7 +177,9 @@ namespace FinalProgect.ViewModel
                     openCommand = new RelayCommand(x =>
                     {
                         loader.LoadMovies(out movies);
-                        Notify(nameof(Movies));
+                        MoviesView = CollectionViewSource.GetDefaultView(Movies);
+                        MoviesView.Filter = MoviesFilter;
+                        Notify(nameof(MoviesView));
                     });
                 return openCommand;
             }
@@ -186,7 +190,7 @@ namespace FinalProgect.ViewModel
             get
             {
                 if (closeCommand == null)
-                    closeCommand = new RelayCommand(x =>saver.SaveMovies(Movies));
+                    closeCommand = new RelayCommand(x => saver.SaveMovies(Movies));
                 return closeCommand;
             }
         }
@@ -207,10 +211,10 @@ namespace FinalProgect.ViewModel
         }
         private void FindSelectedItem(object parametr)
         {
-            foreach(var i in Movies)
+            foreach (var i in Movies)
             {
                 if (parametr as string == i.Title)
-                { 
+                {
                     SelectedMovie = i;
                     SingletonSelect.Movie = i;
                     break;
@@ -240,26 +244,22 @@ namespace FinalProgect.ViewModel
             }
         }
 
-        private void SearchingMovie()
-        {
-            if (searchMovie == string.Empty)
-            {
-                loader.LoadMovies(out movies);
-                Notify(nameof(Movies));
-                return;
-            }
-
-            var predicate = PredicateBuilder.New<Movie>(true);
-            predicate.And(x => x.Title.IndexOf(searchMovie) != -1);
-            Movies = new ObservableCollection<Movie>(Movies.Where(predicate));
-        }
-
         private void OpenWatch()
         {
             Window1 win2 = new Window1();
             win2.ShowDialog();
         }
 
-        #endregion
+        private bool MoviesFilter(object o)
+        {
+            var movieInfo = o as Movie;
+            bool isCintainsTitle = true;
+            if (!string.IsNullOrWhiteSpace(_searchStringFilter) && !string.IsNullOrEmpty(_searchStringFilter))
+            {
+                isCintainsTitle = movieInfo.Title.Contains(_searchStringFilter);
+            }
+            return isCintainsTitle;
+            #endregion
+        }
     }
 }

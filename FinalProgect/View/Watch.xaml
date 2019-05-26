@@ -164,6 +164,7 @@
                         Grid.Column="1"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
+                        TextWrapping="Wrap"
                         Text="{Binding SelectedMovie.Actors}" />
                 </Grid>
             </Grid>

@@ -68,7 +68,7 @@
             <ListBox
                 Name="Ku"
                 Margin="341,80,10,0"
-                ItemsSource="{Binding Movies}"
+                ItemsSource="{Binding MoviesView}"
                 SelectedItem="{Binding SelectedMovie}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -367,7 +367,7 @@
                         materialDesign:HintAssist.Hint="{Resx ResxName=FinalProgect.Resourses.Resources,
                                                               Key=Search}"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                        Text="{Binding MainViewModel.SearchMovie, UpdateSourceTrigger=PropertyChanged}"
+                        Text="{Binding MainViewModel.SearchMovie, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                         TextChanged="SearchTextBox_TextChanged" />
                     <materialDesign:Flipper
                         Grid.Column="3"
