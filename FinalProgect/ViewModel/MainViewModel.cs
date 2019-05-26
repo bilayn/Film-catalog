@@ -224,24 +224,8 @@ namespace FinalProgect.ViewModel
         private void SortMethod(object param)
         {
             string sortParam = param.ToString();
-            switch (sortParam)
-            {
-                case "Title":
-                    Movies = new ObservableCollection<Movie>(Movies.OrderBy(x => x.Title));
-                    break;
-                case "Ganre":
-                    Movies = new ObservableCollection<Movie>(Movies.OrderBy(x => x.Ganre));
-                    break;
-                case "Year":
-                    Movies = new ObservableCollection<Movie>(Movies.OrderByDescending(x => x.Year));
-                    break;
-                case "Rating":
-                    Movies = new ObservableCollection<Movie>(Movies.OrderByDescending(x => x.Rating));
-                    break;
-                case "Director":
-                    Movies = new ObservableCollection<Movie>(Movies.OrderBy(x => x.Director));
-                    break;
-            }
+            MoviesView.SortDescriptions.Clear();
+            MoviesView.SortDescriptions.Add(new SortDescription(sortParam, ListSortDirection.Ascending));
         }
 
         private void OpenWatch()
